@@ -44,6 +44,9 @@ class BinaryTree:
     def get_average(self, start):
         return self.get_sum(start)/self.count_nodes(start)
 
+    # With median I was afraid that the algorithm that uses both recursion and store all the values in a table will be
+    # heavy on space but I didn't have a better idea when it comes to performance
+    
     def get_tab(self, start):
 
         tab = []
@@ -97,4 +100,4 @@ tree.root.right.right.right.right = Node(5)
 
 
 test_tree(tree)
-print(test_time(tree.get_sum, tree.root, 1000))
+print(test_time(tree.get_sum, tree.root, 100000))
